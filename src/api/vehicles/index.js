@@ -16,7 +16,8 @@ routes.get("/", function (req, res) {
 routes.post("/", function (req, res) {
 
     vehiclesModels.create({
-        modelo: req.body.modelo, ano: req.body.ano,
+        modelo: req.body.modelo, 
+        ano: req.body.ano,
     })
 
     res.json({ msg: 'Veiculo Criado!' });
