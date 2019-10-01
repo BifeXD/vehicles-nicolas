@@ -17,8 +17,8 @@ routes.post("/", function (req, res) {
 
     customersModels.create({
         name: req.body.name,
-        cep: req.body.cep, 
-        neighborhood: req.body.neighborhood, 
+        cep: req.body.cep,
+        neighborhood: req.body.neighborhood,
         street: req.body.street,
         number: req.body.number,
         city: req.body.city,
@@ -32,16 +32,16 @@ routes.post("/", function (req, res) {
 // PUT = ATUALIZAR
 routes.put("/:id", function (req, res) {
     id = req.params.id
-    customersModels.update({ _id : id}, {
+    customersModels.update({ _id: id }, {
         name: req.body.name,
         street: req.body.street
-    }).then(() => { res.json({msg: "wow"}) })
+    }).then(() => { res.json({ msg: "wow" }) })
 });
 
 // DELETE = DELETAR
 routes.delete("/:id", function (req, res) {
     const id = req.params.id;
-    customersModels.findOneAndRemove({ _id : id}).then(() => res.json({msg: "Cliente excluido"}));
+    customersModels.findOneAndRemove({ _id: id }).then(() => res.json({ msg: "Cliente excluido" }));
 });
 
 
