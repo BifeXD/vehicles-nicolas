@@ -22,7 +22,7 @@ routes.post("/", function (req, res) {
         street: req.body.street,
         number: req.body.number,
         city: req.body.city,
-        state: req.body.state,
+        state: req.body.state
     })
 
     res.json({ msg: 'Cliente Criado!' });
