@@ -9,7 +9,7 @@ const customers = db.model('clientes',{
     number: String,
     city: String,
     state: String,  
-})
+});
 
 
 
